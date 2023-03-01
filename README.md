@@ -2,3 +2,4 @@
 ## projeto com laravel
 ### para criar projeto com laravel: composer create-project --prefer-dist laravel/laravel nome do seu projeto
 ### coamndo para rodar laravel: php artisan serve
+### comando para criar controller:  php artison make:controller
