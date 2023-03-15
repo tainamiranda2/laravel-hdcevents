@@ -10,9 +10,16 @@ class EventsController extends Controller
 {
     public function index(){
   
-$events=Event::all();
+//$events=Event::all();
+$nome='';
+$idade=30;
 
-return view('welcome',['events'=>$events]);
+return view('welcome',
+[
+'nome'=>$nome,
+'idade'=>$idade,
+'profissao'=>'programador'
+]);
 
     }
 

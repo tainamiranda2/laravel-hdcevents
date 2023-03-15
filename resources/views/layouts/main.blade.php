@@ -21,7 +21,7 @@
 
                     </li>
                     <li>
-                        <a href="/">Criar Receitas</a>
+                        <a href="/events/create">Criar Receitas</a>
                     </li>
                     <li>
                         <a href="/">Entrar</a>
