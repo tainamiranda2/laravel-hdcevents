@@ -4,5 +4,10 @@
 @section('content')
 
       
+@foreach($events as $event)
+
+<p>{{$event -> title}} -- {{$event-> descricao}}</p>
+
+@endforeach
 
 @endsection

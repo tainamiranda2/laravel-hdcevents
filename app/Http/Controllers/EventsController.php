@@ -9,17 +9,11 @@ use App\Models\Event;
 class EventsController extends Controller
 {
     public function index(){
-  
-//$events=Event::all();
-$nome='';
-$idade=30;
+  //chamando todos os eventos
 
-return view('welcome',
-[
-'nome'=>$nome,
-'idade'=>$idade,
-'profissao'=>'programador'
-]);
+    $events=Event::all();
+
+    return view('welcome',['events'=>$events]);
 
     }
 
