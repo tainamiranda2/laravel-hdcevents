@@ -27,7 +27,7 @@
                         <a href="/">Entrar</a>
                     </li>
                     <li>
-                        <a href="/">Cadastrar</a>
+                        <a href="/">Cadastrar venda</a>
                     </li>
                 </ul>
             </nav>
