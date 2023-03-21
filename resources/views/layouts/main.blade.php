@@ -32,7 +32,13 @@
                 </ul>
             </nav>
         </header>
-        @yield('content')
+        <main>
+            @if(session('msg'))
+            <p>{{session('msg')}}</p>
+            @endif
+            @yield('content')
+        </main>
+      
         <footer>
             <p>HDC Events &copy; 2023
             </p>

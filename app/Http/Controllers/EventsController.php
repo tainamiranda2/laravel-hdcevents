@@ -30,9 +30,14 @@ class EventsController extends Controller
       $event->descricao=$request->descricao;
       $event->city=$request->city;
       $event->private=$request->private;
+      $event->items=$request->items;
 
       $event ->save();
 
-      return redirect('/');
+      return redirect('/')->with('msg', 'Evento criado com sucesso');
     }
+    public function show ($id){
+      $event =Event::findOrFail($id);
+      return view('events.show',['event'=>$event]);
+        }
 }

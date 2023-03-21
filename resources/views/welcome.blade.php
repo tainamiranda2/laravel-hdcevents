@@ -11,17 +11,19 @@
 <input type="text" id="search" name="search" placeholder="Procure um evento" />
 
 </form>
-<article>
-@foreach($events as $event)
+<h2>Proximo eventos</h2>
 
+@foreach($events as $event)
+<article>
 <h2>{{$event -> title}} </h2>
 
 <span>{{$event-> descricao}}</span>
 <p>10/08/2023</p>
 <p>X participamentes</p>
-<a href="">Inscreva-se</a>
-@endforeach
+<a href="/events/{{$event->id}}">saber mais</a>
 </article>
+@endforeach
+
 </main>
 
 
