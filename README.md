@@ -8,3 +8,12 @@
 ### ao criar sua tabela escolha os campos:  rode  php artisan migrate:fresh 
 
 ### comando para resgatar dados do banco - php artisan make:model nome_tabela
+
+## features
+### gerenciamento de eventos
+
+## metodos
+### get - para ver todos od eventos
+### get/id - para verapenas um eventos
+### post - para criar eventos
+### search - para buscar eventos

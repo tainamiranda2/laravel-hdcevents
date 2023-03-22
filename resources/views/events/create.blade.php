@@ -6,10 +6,13 @@
 
 <form action="/events" method="POST">
 @csrf
-<label>Titulo</label>
+<label>Titulo do evento</label>
 <input type="text" id="title" 
 name="title" placeholder="Informe o titulo" />
 
+<label>Data do evento</label>
+<input type="date" id="date" 
+name="date"  />
 
 <label>Cidade</label>
 <input type="text" id="city" 
@@ -24,6 +27,7 @@ name="city" placeholder="Informe a cidade" />
 <textarea id="descricao" name="descricao" 
 placeholder="Informe a descrição um evento" ></textarea>
 <label>Adionane items</label>
+<section>
 <div>
 <input type="checkbox" name="items[]" value="cadeiras">Cadeiras
 </div>
@@ -36,6 +40,7 @@ placeholder="Informe a descrição um evento" ></textarea>
 <div>
 <input type="checkbox" name="items[]" value="open food"/>Open food
 </div>
+</section>
 <br>
 <input type="submit" value="Criar evento"/>
 </form>
