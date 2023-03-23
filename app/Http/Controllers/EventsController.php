@@ -42,7 +42,12 @@ $events=Event::where([
       $event->private=$request->private;
       $event->items=$request->items;
 
+      $user=auth()->user();
+
+$event->user->id=$user->id;
+
       $event ->save();
+
 
       return redirect('/')->with('msg', 'Evento criado com sucesso');
     }

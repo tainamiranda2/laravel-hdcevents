@@ -23,12 +23,29 @@
                     <li>
                         <a href="/events/create">Criar Eventos</a>
                     </li>
+                    @auth
+                    <li>
+                        <a href="/dashboard">Meus Eventos</a>
+                    </li>
+                    <li>
+                        @csrf
+                        <form action="/logout" method="POST">
+                        <a href="/logout" onclick="event.preventDefault();
+                        this.closest('form').submit()"; >
+                        Sair
+                    </a>
+                        </form>
+
+                    </li>
+                    @endauth
+                   @guest 
                     <li>
                         <a href="/login">Entrar</a>
                     </li>
                     <li>
                         <a href="/register">Cadastrar-se</a>
                     </li>
+                    @endguest
                 </ul>
             </nav>
         </header>
