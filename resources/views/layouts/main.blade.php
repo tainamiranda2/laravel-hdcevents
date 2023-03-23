@@ -17,17 +17,17 @@
             <nav class="navbar">
                 <ul>
                     <li>
-                        <a href="/">Receitas</a>
+                        <a href="/">Eventos</a>
 
                     </li>
                     <li>
-                        <a href="/events/create">Criar Receitas</a>
+                        <a href="/events/create">Criar Eventos</a>
                     </li>
                     <li>
-                        <a href="/">Entrar</a>
+                        <a href="/login">Entrar</a>
                     </li>
                     <li>
-                        <a href="/">Cadastrar venda</a>
+                        <a href="/register">Cadastrar-se</a>
                     </li>
                 </ul>
             </nav>
