@@ -9,7 +9,7 @@
 
 <p>{{date('d/m/y',strtotime($event->date))}}</p>
 <p>{{$event-> city}}</p>
-<p>Dono do evento</p>
+
 <p>X participamentes</p>
 <a href="/">Confirma presença</a>
 <h3>O evento conta com:</h3>
