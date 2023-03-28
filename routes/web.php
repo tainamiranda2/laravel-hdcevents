@@ -10,18 +10,8 @@ Route::get('/events/{id}',[EventsController::class,'show'] );
 
 Route::post('/events',[EventsController::class,'store'] );
 
-Route::put('/events/update',[EventsController::class,'update'] );
-Route::delete('/events/delete',[EventsController::class,'delete'] );
+Route::put('/events',[EventsController::class,'update'] );
+Route::delete('/events/{id}',[EventsController::class,'destroy'] );
     
-//blade 
-  
+Route::get('/dashboard',[EventsController::class,'dashboard']) ->middleware('auth');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});

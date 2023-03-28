@@ -59,4 +59,17 @@ $event->user_id=$user->id;
 
       return view('events.show',['event'=>$event, '$eventOwer'=>$eventOwer]);
         }
+        public function dashboard(){
+          $user=auth()->user();
+          $events=$user->events;
+
+          return view('events.dashboard', ['events'=>$events]);
+
+        }
+
+        public function destroy($id){
+          Event::findOrfall($id)->delete();
+          return redirect('/dashboard')->with('msg', 'Evento exlcuido com sucesso');
+        }
+
 }
