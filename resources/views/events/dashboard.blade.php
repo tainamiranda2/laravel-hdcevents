@@ -28,9 +28,14 @@
 <td>{{$loop->index+1}}</td>
 <td > <p>{{$event->title}}</p> </td>
 <td > <p>0</p> </td>
-<td > <a href="/events/{{$event->id}}">Editar</a> 
-<button
- href="/events/{{$event->id}}">Deletar</button>
+<td > <a href="/events/edit/{{$event->id}}">Editar</a> 
+<form action="/events/{{$event->id}}" method="POST">
+@csrf
+
+@method('DELETE')
+<button type="submit">Deletar</button>
+
+</form>
  </td>
 
 </tr>

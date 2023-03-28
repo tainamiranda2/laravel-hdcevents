@@ -68,8 +68,14 @@ $event->user_id=$user->id;
         }
 
         public function destroy($id){
-          Event::findOrfall($id)->delete();
+          Event::findOrFail($id)->delete();
           return redirect('/dashboard')->with('msg', 'Evento exlcuido com sucesso');
         }
+        public function edit($id){
 
+          $event=Event::findOrFail($id);
+
+          return view('events.edit',['event'=>$event]);
+
+        }
 }
